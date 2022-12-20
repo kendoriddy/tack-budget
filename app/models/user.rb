@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :trackable
 
+         validates :name, presence: true
+
          private
 
          def after_confirmation
