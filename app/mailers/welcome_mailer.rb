@@ -1,5 +1,4 @@
 class WelcomeMailer < ApplicationMailer
-
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
@@ -7,6 +6,6 @@ class WelcomeMailer < ApplicationMailer
   #
   def send_greetings_notification(user)
     @user = user
-    mail to: @user.email, subject: "Thank you for signing up on our site"
+    mail to: @user.email, subject: 'Thank you for signing up on our site'
   end
 end
