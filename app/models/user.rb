@@ -7,6 +7,12 @@ class User < ApplicationRecord
 
   validates :name, presence: true
 
+  ROLES = %i[admin default].freeze
+
+  def is?(requested_role)
+    role == requested_role.to_s
+  end
+  
   private
 
   def after_confirmation
