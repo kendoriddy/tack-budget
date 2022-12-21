@@ -6,6 +6,9 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations'
   }
   root 'home#index'
+  resources :categories do
+    resources :businesses
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
