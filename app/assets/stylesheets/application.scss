@@ -1,12 +1,21 @@
 /* global styling  */
 
-/*
- *= require font-awesome
- */
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-/*
- *= require ionicons
- */
+// /*
+//  *= require font-awesome
+//  */
+
+// /*
+//  *= require ionicons
+//  */
+
+// /*
+//  *= require 'bootstrap-sass'
+//  */
+
 
 *,
 ::before,

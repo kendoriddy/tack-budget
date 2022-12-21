@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  get 'splash_screens/index'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
     registrations: 'users/registrations',
     confirmations: 'users/confirmations'
   }
-  root 'home#index'
+  root "splash_screens#index"
   resources :categories do
     resources :businesses
   end
