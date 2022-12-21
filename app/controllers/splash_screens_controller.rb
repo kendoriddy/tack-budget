@@ -1,5 +1,5 @@
 class SplashScreensController < ApplicationController
-    skip_before_action :authenticate_user!
+    before_action :authenticate!
     def index
     end
 

@@ -13,7 +13,7 @@
   <body>
   <%= render "shared/header" %>
   <div class="container">
-  <% if !user_signed_in? %>
+  <% if user_signed_in? %>
     <div class="row">
       <%= yield %>
       <p class="notice"><%= notice %></p>
