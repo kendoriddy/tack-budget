@@ -3,3 +3,6 @@
 //= link_tree ../../../vendor/javascript .js
 //= link_tree ../builds
 //= link header.css
+//= link category.css
+//= link application.css
+//= link apply.css
