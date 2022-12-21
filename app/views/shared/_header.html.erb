@@ -10,9 +10,12 @@
         <%= link_to 'Home', root_path, class: 'nav-link active' %>
         </li>
         <% if user_signed_in? %>
-            <li class="nav-item">
-            <%= link_to 'Log Out', destroy_user_session_path, class: 'nav-link active', data: { turbo_method: :delete } %>
-            </li>
+          <li class="nav-item">
+          <%= link_to 'Category', categories_path, class: 'nav-link active' %>
+          </li>
+          <li class="nav-item">
+          <%= link_to 'Log Out', destroy_user_session_path, class: 'nav-link active', data: { turbo_method: :delete } %>
+          </li>
         <% else %>
             <%= link_to 'Sign In', new_user_session_path, class: 'nav-link active' %>
         <% end %>
