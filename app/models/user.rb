@@ -7,6 +7,7 @@ class User < ApplicationRecord
 
   has_many :categories, dependent: :destroy
   has_many :transactions, dependent: :destroy, foreign_key: 'author_id'
+  has_one_attached :avatar
 
   validates :name, presence: true
 

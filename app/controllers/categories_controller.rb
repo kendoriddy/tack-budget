@@ -1,6 +1,7 @@
 class CategoriesController < ApplicationController
+    before_action :authenticate_user!
     def index
-      @categories = current_user.categories
+      @categories = Category.where(author_id: current_user.id)
     end
   
     def new
@@ -9,7 +10,6 @@ class CategoriesController < ApplicationController
   
     def create
       @category = Category.new(category_params)
-      @category.user = current_user
   
       if @category.save
         flash[:success] = 'Category successfully created'
@@ -21,13 +21,14 @@ class CategoriesController < ApplicationController
     end
   
     def show
-      # @category = Category.includes(:user).find(params[:id])
-      @category = Category.includes(:businesses).find(params[:id])
-      @transactions = @category.businesses.order(created_at: :desc)
+      @category = Category.includes(:transactions).find(params[:id])
+      @transactions = @category.transactions.order(created_at: :desc)
     end
   
     def category_params
-      params.require(:category).permit(:name, :icon)
+      my_category = params.require(:category).permit(:name, :icon)
+      my_category[:author] = current_user
+      my_category
     end
   
     def destroy
