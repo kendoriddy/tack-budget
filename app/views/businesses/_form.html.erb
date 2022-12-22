@@ -1,5 +1,9 @@
 <%= form_with model: @business, url: category_businesses_path, :html => {:class => 'form', :id => 'form' }  do |form| %>
 
+      <div class="field">
+         <%= form.select :category, categories.map { |category| category.name}, :multiple => true, required: true, class: 'select' %><br />
+         
+      <div>
        <div class="field">
         <%= form.text_field :name, autofocus: true, autocomplete: "text", placeholder: "Enter transaction name" %>
         <% @business.errors.full_messages_for(:name).each do |message| %>
@@ -13,7 +17,7 @@
         <% end %>
       </div>
 
-       <div class="actions">
-      <%= form.submit "Add", class: 'category-btn'%>
+       <div class="transaction-actions">
+      <%= form.submit "Add", id: 'transaction-btn'%>
     </div>
 <% end %>
