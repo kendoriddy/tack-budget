@@ -32,6 +32,10 @@
     <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
   </div>
 
+  <div class="actions mb-4">
+    <%= f.submit "Sign up", class: 'btn main-bg text-light' %>
+  </div>
+
 <% end %>
 
 <%= render "users/shared/links" %>

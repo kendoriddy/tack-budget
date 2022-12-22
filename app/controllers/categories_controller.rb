@@ -21,8 +21,8 @@ class CategoriesController < ApplicationController
     end
   
     def show
-      @category = Category.includes(:transactions).find(params[:id])
-      @transactions = @category.transactions.order(created_at: :desc)
+      @category = Category.includes(:businesses).find(params[:id])
+      @transactions = @category.businesses.order(created_at: :desc)
     end
   
     def category_params

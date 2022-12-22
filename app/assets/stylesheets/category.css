@@ -3,6 +3,7 @@
   background-color: #182533;
   width: 100%;
   min-height: 100vh;
+  color: white;
 }
 
 .category-header {
@@ -147,7 +148,6 @@
 }
 
 .category-footer {
-  position: fixed;
   width: 100%;
   bottom: 10px;
   display: flex;
@@ -159,14 +159,12 @@
 }
 
 .category-footer .category-btn {
-  width: 50px;
   border-radius: 10px;
-  font-size: 2rem;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  padding: 10px;
   background-color: white;
   cursor: pointer;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
