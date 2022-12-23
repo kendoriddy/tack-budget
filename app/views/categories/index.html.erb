@@ -8,8 +8,8 @@
           <li>
             TRANSACTIONS
           </li>
-          <li>
-            <i class="fa fa-search"></i>
+          <li class="logout">
+            <%= link_to 'Log Out', destroy_user_session_path, class: 'nav-link active', data: { turbo_method: :delete } %>
           </li>
         </ul>
       </nav>
