@@ -9,13 +9,8 @@ gem 'rails', '~> 7.0.4'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-<<<<<<< HEAD
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
-=======
-# Use postgres as the database for Active Record
-gem 'pg'
->>>>>>> 4b5e59b79723f61b349dc55d1c87693f696503c6
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
@@ -48,8 +43,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 
 # Use Sass to process CSS
-gem 'bootstrap-sass', '~> 3.4.1'
-gem 'sassc-rails', '>= 2.1.0'
+# gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -57,15 +51,10 @@ gem 'sassc-rails', '>= 2.1.0'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-
-  gem 'database_cleaner'
-  gem 'rspec'
-  gem 'rspec-rails'
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem 'letter_opener'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -83,9 +72,3 @@ group :test do
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
-
-gem 'cancancan'
-gem 'cssbundling-rails'
-gem 'devise'
-gem 'font-awesome-rails'
-gem 'rails-controller-testing'
