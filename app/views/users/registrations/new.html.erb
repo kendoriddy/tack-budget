@@ -1,0 +1,50 @@
+<section class="user-input-container">
+   <header class="input-container">
+    <nav>
+      <ul class='links'>
+        <li>
+        <p><%= link_to "←", splash_screens_index_path, class:'text-light text-decoration-none' %></p>
+        <li>
+        <li>
+          REGISTER
+        <li>
+        <li class='login'>
+          <input type="submit" value='Next' form='form' class='submit'>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => {:class => 'form', :id => 'form', data: { turbo: false } } ) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  
+  <div class="field">
+    <%= f.text_field :name, autofocus: true, autocomplete: "text", placeholder: "Full name" %>
+  </div>
+    
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password Confirmation" %>
+  </div>
+
+  <div class="actions mb-4">
+    <%= f.submit "Sign up", class: 'btn main-bg text-light' %>
+  </div>
+
+<% end %>
+
+<%= render "users/shared/links" %>
+<br/>
+<br/>
+<br/>
+<br/>
+</section>
+
+

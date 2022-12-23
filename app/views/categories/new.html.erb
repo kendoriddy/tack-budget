@@ -1,0 +1,18 @@
+<section class="user-input-container">
+  <header class="input-container">
+    <nav>
+      <ul class='links'>
+        <li>
+        <%= link_to '←',categories_path, class:'text-light text-decoration-none' %>
+        </li>
+        <li>
+          ADD CATERGORY
+        </li>
+        <li class='login'>
+          <input type="submit" value='Add' form='form' class='submit'>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <%= render "form", category: @category %>
+</section>
