@@ -8,26 +8,9 @@
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    <%= stylesheet_link_tag "header" %>
-    <%= stylesheet_link_tag "category" %>
-    <%= stylesheet_link_tag "apply" %>
   </head>
 
   <body>
-  <div class="container">
-  <% if user_signed_in? %>
-    <div class="row">
-      <%= yield %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    </div>
-    <%else %>
-    <div class="row">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
-    </div>
-    <%end %>
-  </div>
+    <%= yield %>
   </body>
 </html>
