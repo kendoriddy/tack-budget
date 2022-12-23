@@ -31,7 +31,7 @@ In order to work on this project, you need to have the following dependencies in
 
 ### Click here for Video Link
 
-- [Video link]()
+- [Video link](https://www.loom.com/share/c75b20a437174962be40057fd011c2a9)
 
 ## Getting Started
 
@@ -93,7 +93,7 @@ For you to see the styling being applied in the browser during development
 
 ## Author
 
-👤 **Ojesanmi Elizabeth Oyin**
+👤 **Kehinde Ridwan Onifade**
 
 - GitHub: [@githubhandle](https://github.com/kendoriddy)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/kehindeonifade)
