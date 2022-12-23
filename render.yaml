@@ -1,0 +1,18 @@
+databases:
+  - name: tack_budget
+    databaseName: tack_budget
+    user: tack_budget
+
+services:
+  - type: web
+    name: tack_budget
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tack_budget
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
