@@ -1,32 +1,32 @@
-
-   <section class="categories_controllers">
-    <nav class="navbar navbar-dark main-bg ">
-    <div class="container">
-     <%= link_to '←',categories_path, class:'text-light text-decoration-none' %>
-       <a class="navbar-brand" href="#">DETAILS</a>
-       <%= link_to 'Tack',{}, class: 'text-light fs-5 text-decoration-none'%>
-  </div>
-  </nav>
-
-  <section class="category-section details ">
-    <div class='payment'>
-      <p>TOTAL EXPENSES</p>
-      <h2>$<%= @category.businesses.sum(:amount) || '0.00' %></h2>
-      <div class='desc'>
-        <ion-icon id="list-img" name="<%= @category.icon %>"  class="transaction-img <%= @category.icon %>"></ion-icon>
-        <span>
-          <h3><%= @category.name %></h3>
-        </span>
-      </div>
+<section class="categories_controllers">
+  <header class="input-container">
+    <nav>
+      <ul class='links'>
+        <li>
+        <%= link_to '←',categories_path, class:'text-light text-decoration-none' %>
+        </li>
+        <li>
+          DETAILS
+        </li>
+        <li>
+          <i class="fa fa-bars"></i>
+        </li>
+      </ul>
+    </nav>
+  </header>
+ <section class="category-lists-wrapper details ">
+    <div class='desc'>
+      <%= image_tag(@category.icon, class:'list_image') %>
+      <span>
+        <h2><%= @category.name %></h2>
+      </span>
     </div>
-      <% if @transactions.present?%>
-        <div class="transaction-container">
     <hr>
-    <% @transactions.each do |transaction| %>
+    <% @transactions.each do |transaction| %> 
     <div class='transaction'>
       <span>
         <h3><%= transaction.name %></h3>
-        <small>$<%= transaction.amount %></small>
+        <p>$<%= transaction.amount %></p>
         <small><%= transaction.created_at.to_date.strftime("%d %b, %Y") %></small>
       </span>
       <span>
@@ -34,17 +34,16 @@
       </span>
     </div>
     <hr>
-
+    
    <% end %>
-    <%= button_to "Delete Category", category_path, method: :delete, class: 'delete-categories' %>
-</div>
-  <% else %>
-  <p></p>
-  <% end %>
+   <div class='payment'>
+      <h4>TOTAL PAYMENT</h4>
+      <p>$<%= @category.businesses.sum(:amount) || '0.00' %></p>
+    </div>
+    <%= button_to "Delete Category", category_path, method: :delete, class: 'category-btn' %>
 
-  </section>
+  </section> 
   <div class='category-footer'>
-    <%= button_to "+", new_category_business_path(@category), method: :get, class: 'category-btn' %>
-    <p>Add New Transaction
+    <%= button_to "Add New Transaction", new_category_business_path(@category), method: :get, class: 'category-btn' %>
   </div>
 </section>
