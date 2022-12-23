@@ -9,13 +9,8 @@ gem 'rails', '~> 7.0.4'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-<<<<<<< HEAD
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
-=======
 # Use postgres as the database for Active Record
 gem 'pg'
->>>>>>> 4b5e59b79723f61b349dc55d1c87693f696503c6
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
